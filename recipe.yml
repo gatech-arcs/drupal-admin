@@ -1,0 +1,70 @@
+name: 'GT Admin UI and Navigation'
+description: 'Install and configure the Gin admin theme and supporting modules.'
+type: 'Site'
+
+install:
+  - config
+  - help
+  # Install Claro as it's a dependency of Gin, but don't import config
+  - claro
+  - toolbar
+  - admin_toolbar
+  - admin_toolbar_search
+  - admin_toolbar_tools
+  - gin
+  - gin_login
+  - gin_toolbar
+  - navigation
+
+config:
+  # Allow config import to continue if some config already exists
+  strict: false
+  import:
+    admin_toolbar: '*'
+    admin_toolbar_search: '*'
+    admin_toolbar_tools: '*'
+    # Import all Gin and Gin Login config. Gin Toolbar has none
+    gin:
+      - gin.settings
+      - block.block.gin_breadcrumbs
+      - block.block.gin_content
+      - block.block.gin_help
+      - block.block.gin_local_actions
+      - block.block.gin_messages
+      - block.block.gin_page_title
+      - block.block.gin_primary_local_tasks
+    gin_login: '*'
+    navigation:
+      - system.menu.content
+
+  actions:
+    # Set and unset Gin blocks.
+    block.block.gin_admin:
+      setStatus: false
+    block.block.gin_branding:
+      setStatus: false
+    block.block.gin_local_actions:
+      setRegion: content
+      setWeight: -10
+    block.block.gin_local_tasks:
+      setStatus: false
+    block.block.gin_page_title:
+      setRegion: header
+      setWeight: -10
+    block.block.gin_primary_local_tasks:
+      setRegion: header
+      setWeight: -5
+      # @TODO Blocks should have setSetting(s) config action.
+      # We shouldn't use simpleConfigUpdate here as this is not simple config.
+      simpleConfigUpdate:
+        settings.secondary: true
+    block.block.gin_tools:
+      setStatus: false
+      
+    # Update the admin theme to Gin in Theme settings.
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    system.theme:
+      simpleConfigUpdate:
+        admin: gin
