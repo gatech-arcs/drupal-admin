@@ -17,10 +17,8 @@
     "require": {
         "drupal/core": ">=10.4",
 
-        "drupal/admin_toolbar": "^3.5",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^2.1",
-        "drupal/gin_toolbar": "^1.0",
-        "navigation_extra_tools": "^1.0"
+        "drupal/gin_toolbar": "^1.0"
     }
 }

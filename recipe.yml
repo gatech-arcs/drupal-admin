@@ -60,7 +60,7 @@ config:
         settings.secondary: true
     block.block.gin_tools:
       setStatus: false
-      
+
     # Update the admin theme to Gin in Theme settings.
     node.settings:
       simpleConfigUpdate:
