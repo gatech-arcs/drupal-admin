@@ -17,8 +17,11 @@
     "require": {
         "drupal/core": ">=10.4",
 
-        "drupal/gin": "^3.0",
+        "drupal/coffee": "^2.0",
+        "drupal/navigation_extra_tools": "^3.5",
+
+        "drupal/gin": "^4.0",
         "drupal/gin_login": "^2.1",
-        "drupal/gin_toolbar": "^1.0"
+        "drupal/gin_toolbar": "^2.0"
     }
 }

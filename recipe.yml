@@ -8,21 +8,21 @@ install:
   # Install Claro as it's a dependency of Gin, but don't import config
   - claro
   - toolbar
-  - admin_toolbar
-  - admin_toolbar_search
-  - admin_toolbar_tools
+  - navigation
+  - navigation_extra_tools
   - gin
   - gin_login
   - gin_toolbar
-  - navigation
+  - coffee
 
 config:
   # Allow config import to continue if some config already exists
   strict: false
   import:
-    admin_toolbar: '*'
-    admin_toolbar_search: '*'
-    admin_toolbar_tools: '*'
+    toolbar: '*'
+    navigation:
+      - system.menu.content
+    navigation_extra_tools: '*'
     # Import all Gin and Gin Login config. Gin Toolbar has none
     gin:
       - gin.settings
@@ -34,8 +34,7 @@ config:
       - block.block.gin_page_title
       - block.block.gin_primary_local_tasks
     gin_login: '*'
-    navigation:
-      - system.menu.content
+    coffee: '*'
 
   actions:
     # Set and unset Gin blocks.
