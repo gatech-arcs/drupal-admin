@@ -1,0 +1,27 @@
+{
+    "name": "gtsciences/gt-admin",
+    "description": "Install and configure the Gin admin theme, nav, and other misc admin",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "_comment": [
+        "Much appreciation to Jim Birch's https://github.com/kanopi/gin-admin-experience",
+        "and to the Drupal CMS https://www.drupal.org/project/drupal_cms_admin_ui/"
+    ],
+    "authors": [
+        {
+            "name": "Michael Sheldon",
+            "homepage": "https://cos.gatech.edu/",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "drupal/core": ">=10.4",
+
+        "drupal/coffee": "^2.0",
+        "drupal/navigation_extra_tools": "^3.5",
+
+        "drupal/gin": "^4.0",
+        "drupal/gin_login": "^2.1",
+        "drupal/gin_toolbar": "^2.0"
+    }
+}
