@@ -26,6 +26,7 @@ config:
       - block.block.gin_page_title
       - block.block.gin_primary_local_tasks
       - block.block.gin_secondary_local_tasks
+      - gin.settings
     navigation:
       - system.menu.content
       - system.menu.navigation-user-links
@@ -42,9 +43,9 @@ config:
     gin_login.settings:
       simpleConfigUpdate:
         brand_image:
-          use_default: false
+          use_default: true
           # This is placed by the file entity that ships with this recipe.
-          path: public://login-wallpaper.png
+          # path: public://login-wallpaper.png
     navigation.block_layout:
       # To prevent duplicated items if this recipe is applied more than once,
       # this needs to be changed as simple config. That's okay, though, because
