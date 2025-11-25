@@ -10,6 +10,8 @@ install:
   - gin
   - gin_login
   - gin_toolbar
+  - masquerade
+  - module_filter
   - navigation
   - navigation_extra_tools
   - sam
