@@ -13,6 +13,7 @@ install:
   - masquerade
   - module_filter
   - navigation
+  - navigation_extra
   - navigation_extra_tools
   - sam
   - tagify
@@ -20,27 +21,9 @@ install:
 config:
   strict: false
   import:
-    gin:
-      - block.block.gin_breadcrumbs
-      - block.block.gin_content
-      - block.block.gin_local_actions
-      - block.block.gin_messages
-      - block.block.gin_page_title
-      - block.block.gin_primary_local_tasks
-      - block.block.gin_secondary_local_tasks
-      - gin.settings
-    navigation:
-      - system.menu.content
-      - system.menu.navigation-user-links
-    navigation_extra_tools: "*"
-    claro:
-      - block.block.claro_breadcrumbs
-      - block.block.claro_content
-      - block.block.claro_local_actions
-      - block.block.claro_messages
-      - block.block.claro_page_title
-      - block.block.claro_primary_local_tasks
-      - block.block.claro_secondary_local_tasks
+    navigation: '*'
+    gin: '*'
+    gin_login: '*'
   actions:
     gin_login.settings:
       simpleConfigUpdate:
