@@ -9,6 +9,7 @@ install:
   - gin
   - gin_login
   - gin_toolbar
+  - help
   - masquerade
   - module_filter
   - navigation
