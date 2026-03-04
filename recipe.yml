@@ -4,11 +4,19 @@ type: 'Site'
 
 install:
   - coffee
+  - config
+  - config_ignore
+  - config_split
   - contextual
+  - csp
   - dashboard
+  - environment_indicator
+  - environment_indicator_toolbar
+  - fastly
   - gin
   - gin_login
   - gin_toolbar
+  - health_check
   - help
   - masquerade
   - module_filter
@@ -16,6 +24,12 @@ install:
   - navigation_extra_tools
   - sam
   - tagify
+  - token
+  - token_or
+  - security_review
+  - views_bulk_edit
+  - views_bulk_operations
+  - views_data_export
 
 config:
   strict: false
