@@ -19,6 +19,7 @@ install:
   - health_check
   - help
   - masquerade
+  - masquerade_log
   - module_filter
   - navigation
   - navigation_extra_tools
